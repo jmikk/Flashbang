@@ -1,0 +1,14 @@
+// ==UserScript==
+// @name        Random Background Color Change
+// @match       https://*.nationstates.net/*template-overall=none*
+// @grant       none
+// @version     1.0
+// @author      9003
+// @description Randomly change the background color between red and blue
+// ==/UserScript==
+(function () {
+    'use strict';
+    setInterval(function () {
+        document.querySelector('body').style.backgroundColor = Math.random() < 0.5 ? 'red' : 'blue';
+    }, 1);
+})();
